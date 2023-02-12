@@ -2,16 +2,12 @@ const express = require('express');
 const path = require('path');
 const fs = require("fs");
 const notes = require("./db/db.json");
-const path = require("path");
 const uuid = require("uuid");
-const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
+//const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
 
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./route/htmlRoutes');
 
 app.use(express.urlencoded({
   extended: true
