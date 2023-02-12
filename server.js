@@ -1,13 +1,14 @@
 const express = require('express');
 const path = require('path');
-const fs = require("fs/promises");
+const fs = require("fs");
 const notes = require("./db/db.json");
 const path = require("path");
 const uuid = require("uuid");
+const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
 
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./route/htmlRoutes');
@@ -23,12 +24,12 @@ app.use(express.json());
 //routes for APIs 
 
 //this command is responsible for saving notes
-app.get('/api/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/db/db.json'))
-);
+app.get("/api/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, "/db/db.json"))
+});
 
 //this one is to add new notes
-app.use('/api/notes', (req, res) => {
+app.use("/api/notes", (req, res) => {
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
   const newNotes = req.body;
   newNotes.id = uuid.v4();
@@ -46,13 +47,21 @@ app.delete("/api/notes/:id", (req, res) => {
   res.json(delNote);
 })
 
+//html call: home page
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "/public/index.html"));
+});
+//calling: notes
+app.get("/notes", function (req, res) {
+  res.sendFile(path.join(__dirname, "/public/notes.html"));
+});
+
 
 //Start Listen
-app.listen(PORT, () => 
+app.listen(PORT, function () { 
   //debug
   console.log(`App listening at http://localhost:${PORT}`)
-  );
+});
 
 //node server.js
-//npm i -g nodemon then nodemon server.js
-//to not restart file: nodemon file.js
+
