@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require("fs");
 const notes = require("./db/db.json");
 const uuid = require("uuid");
-//const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
+const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
 
 
 const app = express();
@@ -32,15 +32,17 @@ app.use("/api/notes", (req, res) => {
   notes.push(newNotes);
   fs.writeFileSync("db/db.json", JSON.stringify(notes))
   res.json(notes);
-
 });
 
 //to be able to delete a note/s
 app.delete("/api/notes/:id", (req, res) => {
+  console.log(delNote);
+  console.log("delete route hit!");
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
   const delNote = notes.filter((rmvNote) => rmvNote.id !== req.params.id);
   fs.writeFileSync(".db/db.json", JSON.stringify(delNote));
-  res.json(delNote);
+  //res.json(delNote);
+
 })
 
 //html call: home page
