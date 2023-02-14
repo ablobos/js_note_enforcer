@@ -107,17 +107,10 @@ const renderNoteList = (notes) => {
     $li.append($span);
 
     if (delBtn) {
-      const $delBtn = document.createElement('i');
-      delBtn.classList.add(
-        'fas',
-        'fa-trash-alt',
-        'float-right',
-        'text-danger',
-        'delete-note'
+      const $delBtn = $(
+        "<i class='fas fa-trash-alt float-right text-danger delete-note'>"
       );
-      delBtn.addEventListener('click', handleNoteDelete);
-
-      $li.append(delBtn);
+    $li.append(delBtn);
     }
     return $li;
   };
