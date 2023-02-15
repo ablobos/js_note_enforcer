@@ -25,7 +25,7 @@ const saveNote = (note) => {
 
 const deleteNote = (id) => {
   return $.ajax ({
-    url: "api/notes" + id, 
+    url: "/api/notes/" + id, 
     method: 'DELETE',
     });
   };
@@ -97,7 +97,7 @@ const handleRenderSaveBtn = function () {
 // Render the list of note titles
 const renderNoteList = (notes) => {
  $noteList.empty();
-
+//console.log(notes)
   const noteListItems = [];
 
   // Returns HTML element with or without a delete button

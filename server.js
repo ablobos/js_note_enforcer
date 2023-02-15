@@ -21,11 +21,11 @@ app.use(express.json());
 
 //this command is responsible for saving notes
 app.get("/api/notes", (req, res) => {
-  res.sendFile(path.join(__dirname, "/db/db.json"))
+  res.json(notes)
 });
 
 //this one is to add new notes
-app.use("/api/notes", (req, res) => {
+app.post("/api/notes", (req, res) => {
   const notes = JSON.parse(fs.readFileSync("./db/db.json"));
   const newNotes = req.body;
   newNotes.id = uuid.v4();
