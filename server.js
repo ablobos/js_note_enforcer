@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require("fs");
 const notes = require("./db/db.json");
 const uuid = require("uuid");
-const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
+//const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
 
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(express.urlencoded({
 }));
 
 app.use(express.urlencoded({ extended: true}));
-app.use(express.static('public'));
+app.use(express.static("public"));
 app.use(express.json());
 
 //routes for APIs 

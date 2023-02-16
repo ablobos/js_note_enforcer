@@ -23,6 +23,7 @@ const saveNote = (note) => {
   });
   };
 
+  //delete the note from the db after adding
 const deleteNote = (id) => {
   return $.ajax ({
     url: "/api/notes/" + id, 
@@ -110,7 +111,7 @@ const renderNoteList = (notes) => {
       const $delBtn = $(
         "<i class='fas fa-trash-alt float-right text-danger delete-note'>"
       );
-    $li.append(delBtn);
+    $li.append($delBtn);
     }
     return $li;
   };
@@ -133,7 +134,7 @@ const getAndRenderNotes = () => {
 };
 
 $saveNoteBtn.on("click", handleNoteSave);
-$noteList.on("click", ".list-group-item", handleNewNoteView);
+$noteList.on("click", ".list-group-item", handleNoteView);
 $newNoteBtn.on("click", handleNewNoteView);
 $noteList.on("click", "delete-note", handleNoteDelete);
 $noteTitle.on("keyup", handleRenderSaveBtn);
