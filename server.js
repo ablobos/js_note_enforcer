@@ -3,12 +3,13 @@ const path = require('path');
 const fs = require("fs");
 const notes = require("./db/db.json");
 const uuid = require("uuid");
-//const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
+const { DH_CHECK_P_NOT_SAFE_PRIME } = require("constants");
 
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+//Mid Ware
 app.use(express.urlencoded({
   extended: true
 }));
@@ -17,8 +18,7 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.static("public"));
 app.use(express.json());
 
-//routes for APIs 
-
+//ROUTES FOR APIs...
 //this command is responsible for saving notes
 app.get("/api/notes", (req, res) => {
   res.json(notes)
@@ -30,7 +30,7 @@ app.post("/api/notes", (req, res) => {
   const newNotes = req.body;
   newNotes.id = uuid.v4();
   notes.push(newNotes);
-  fs.writeFileSync("db/db.json", JSON.stringify(notes))
+  fs.writeFileSync("./db/db.json", JSON.stringify(notes))
   res.json(notes);
 });
 
