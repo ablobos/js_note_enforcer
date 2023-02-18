@@ -20,14 +20,14 @@ app.post('/api/notes', (req, res) => {
         text: req.body.text,
         id: uniqid(),
     };
-
+//pushing notes
     db.push(userNote);
-    fs.writeFileSync('.db.db.json', JSON.stringify(db));
+    fs.writeFileSync('./db/db.json', JSON.stringify(db));
     res.json(db);
 });
 
 app.delete('/api/notes/:id', (req, res) => {
-    let db = JSON.parse(fs.readFileSync('.db/db/.json'))
+    let db = JSON.parse(fs.readFileSync('./db/db.json'))
     let deleteNotes = db.filter(item => item.id !== req.params.id);
     fs.writeFileSync('.db/db.json', JSON.stringify(deleteNotes));
     res.json(deleteNotes);
