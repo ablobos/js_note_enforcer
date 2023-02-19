@@ -61,7 +61,6 @@ Option 2) (https://user-images.githubusercontent.com/117130907/219965670-c5fd1fd
 
 Option 4) <iframe src="https://drive.google.com/file/d/18uXZbEOTZ-55WgJUwO0nllGpAMvxVLXR/preview" width="640" height="480"></iframe> 
 
-Images:
 Add Notes
 ![image](https://user-images.githubusercontent.com/117130907/219965725-eda8d63a-de94-477f-acc8-3ba0baabcaef.png)
 
