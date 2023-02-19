@@ -27,6 +27,9 @@ To use the app from VS or Atom, npm start then use local port link or...
 ## Usage
 
 ## Sneak Peek
+[Note Taker.webm](https://user-images.githubusercontent.com/117130907/219965670-c5fd1fd5-142d-4e15-a462-cbbbd21d4d3b.webm)
+![image](https://user-images.githubusercontent.com/117130907/219965725-eda8d63a-de94-477f-acc8-3ba0baabcaef.png)
+![image](https://user-images.githubusercontent.com/117130907/219965821-1652c4d9-5c70-49b7-a6f2-569f237ca4a1.png)
 ## License
 
 The MIT License (MIT)
