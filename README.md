@@ -52,8 +52,9 @@ WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 ## Sneak Peek
+https://drive.google.com/file/d/18uXZbEOTZ-55WgJUwO0nllGpAMvxVLXR/view 
 [Note Taker.webm](https://user-images.githubusercontent.com/117130907/219965670-c5fd1fd5-142d-4e15-a462-cbbbd21d4d3b.webm)
-"C:\Users\nxtlo\bootcamp\js_note_enforcer\Note Taker.webm" (Video included in the repo)
+(Video included in the repo)
 
 Images:
 Add Notes
