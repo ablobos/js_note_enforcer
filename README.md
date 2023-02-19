@@ -9,10 +9,15 @@ My challenge is to create an application called "Note Taker" that can be used to
 ## Table of Contents
 
 • Built With
+
 • Installation
+
 • Usage
+
 • Sneak Peek
+
 • License
+
 ## Built With
 
 HTML, CSS, JS, Node, Express, & uniqID
