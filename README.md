@@ -54,7 +54,9 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 ## Sneak Peek
 https://drive.google.com/file/d/18uXZbEOTZ-55WgJUwO0nllGpAMvxVLXR/view 
 
-[Note Taker.webm](https://user-images.githubusercontent.com/117130907/219965670-c5fd1fd5-142d-4e15-a462-cbbbd21d4d3b.webm)
+(https://user-images.githubusercontent.com/117130907/219965670-c5fd1fd5-142d-4e15-a462-cbbbd21d4d3b.webm)
+
+![image](https://user-images.githubusercontent.com/117130907/219966476-e6bc272d-2a01-43bd-a087-f2aa6b6078aa.png)
 
 (Video included in the repo)
 
