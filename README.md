@@ -52,11 +52,12 @@ WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 ## Sneak Peek
-Option 1) https://drive.google.com/file/d/18uXZbEOTZ-55WgJUwO0nllGpAMvxVLXR/view 
+
+Option 1) ![image](https://user-images.githubusercontent.com/117130907/219966476-e6bc272d-2a01-43bd-a087-f2aa6b6078aa.png)
+
+Option 2) https://drive.google.com/file/d/18uXZbEOTZ-55WgJUwO0nllGpAMvxVLXR/view 
 
 Option 2) (https://user-images.githubusercontent.com/117130907/219965670-c5fd1fd5-142d-4e15-a462-cbbbd21d4d3b.webm)
-
-Option 3) ![image](https://user-images.githubusercontent.com/117130907/219966476-e6bc272d-2a01-43bd-a087-f2aa6b6078aa.png)
 
 Option 4) <iframe src="https://drive.google.com/file/d/18uXZbEOTZ-55WgJUwO0nllGpAMvxVLXR/preview" width="640" height="480"></iframe> 
 
